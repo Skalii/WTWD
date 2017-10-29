@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 7</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="lab7.js"></script>
+</head>
+<body>
+<hr width=30%>
+<div align='center'>
+    | <a href="/lab7.html">Л.р. №7</a>
+    | <a href="../lab8/lab8_000webhost.php">Л.р. №8</a>
+    | <a href="../lab9/lab9.html">Л.р. №9</a>
+    | <a href="../lab10/lab10.html">Л.р. №10</a>
+    | <a href="../lab11/lab11.html">Л.р. №11</a> |
+</div>
+<hr width=30%>
+<form id="form" action="process.php" onsubmit="return checkForm(this)" method="post">
+    <p>
+        Имя: <input type="text" name="name" placeholder="Дмитрий">
+    </p>
+    <p>
+        Email: <input type="email" name="email" placeholder="e@mail.com">
+    </p>
+    <p>
+        Пароль: <input type="password" name="password1" placeholder="password">
+    </p>
+    <p>
+        Проверка пароля: <input type="password" name="password2" placeholder="password">
+    </p>
+    <p>
+        Сообщение: <textarea name="message" form="form" placeholder="..." rows="5" cols="30"></textarea>
+    </p>
+    <input type="submit" name="submit" value="Отправить">
+</form>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 2</title>
+
+    <script>
+        function displ(arg) {
+            if (document.getElementById(arg).style.display === 'none')
+                document.getElementById(arg).style.display = 'block';
+            else document.getElementById(arg).style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+
+<p><b>STOP!</b></p>
+<p>Нажмите на эту <a href="javascript: displ('changeText')">ссылку</a></p>
+<div id="changeText" style="display: none;">
+    <p>Здесь оторбражается текст по нажатию на ссылку</p>
+    <div style="display: block"></div>
+</div>
+
+<p><a href="javascript: displ('changeImage')"><img src="lab2.png"></a></p>
+<div id="changeImage" style="display: none;">
+    <p>Сериал 'Легион'</p>
+    <div style="display: block"></div>
+</div>
+
+</body>
+</html>

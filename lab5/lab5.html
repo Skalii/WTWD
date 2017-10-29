@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 5</title>
+</head>
+<body>
+
+<div align="center">
+    <script src="lab5.js"></script>
+    <form name="form1">
+        <h3>Введите новое название кнопки</h3>
+        <input type=text name="textButton">
+        <br><br>
+        <input type=button name="changeName" value="Изменить название" onClick="(
+            function click() {
+                document.form1.changeName.value = document.form1.textButton.value;
+            })()">
+    </form>
+    <br>
+    <hr width="30%">
+    <form name="form2">
+        <h3>Выберите флажок</h3>
+        <table>
+            <tr>
+                <th><input type="checkbox" name='check1' onclick="setCheck('check1')">Флажок 1</th>
+            </tr>
+            <tr>
+                <th><input type="checkbox" name="check2" onclick="setCheck('check2')">Флажок 2</th>
+            </tr>
+            <tr>
+                <th><input type="checkbox" name="check3" onclick="setCheck('check3')">Флажок 3</th>
+            </tr>
+            <tr>
+                <th><input type="checkbox" name="check4" onclick="setCheck('check4')">Флажок 4</th>
+            </tr>
+            <tr>
+                <th><input type="checkbox" name="check5" onclick="setCheck('check5')">Флажок 5</th>
+            </tr>
+        </table>
+        <br>
+        <input type="text" name="textCheck">
+    </form>
+    <br>
+    <hr width="30%">
+    <form name="form3">
+        <h3>Выберите переключатель</h3>
+        <table>
+            <tr>
+                <th><input type="radio" name="radioGroup" id="radio1" onclick="setRadio('radio1')">Переключатель 1</th>
+            </tr>
+            <tr>
+                <th><input type="radio" name="radioGroup" id="radio2" onclick="setRadio('radio2')">Переключатель 2</th>
+            </tr>
+            <tr>
+                <th><input type="radio" name="radioGroup" id="radio3" onclick="setRadio('radio3')">Переключатель 3</th>
+            </tr>
+        </table>
+        <br>
+        <input type="text" name="textRadio">
+    </form>
+    <br>
+    <hr width="30%">
+    <form name="form4">
+        <h3>Вычисление площади квадрата</h3>
+        Сторона: <input type="text" name="side">
+        <br><br>
+        <input type="button" name="buttonResult" value="Вычислить" onclick="setArea()">
+        <br><br>
+        Площадь: <input type="text" name="textResult">
+    </form>
+    <br>
+    <hr width="30%">
+</div>
+</body>
+</html>

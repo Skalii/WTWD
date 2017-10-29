@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 3</title>
+</head>
+<body>
+
+<script>
+    var name = "";
+    do {
+        name = prompt("Введите ваше имя:", '');
+        if (name === "null") break;
+        alert(name);
+    } while (confirm("Введете еще раз?"));
+</script>
+
+<script src="lab3.js"></script>
+<script>
+    var nummbers = prompt("Введите два числа через пробел", '');
+    if (nummbers !== 'null')
+        alert(
+            max(
+                +nummbers.substring(0, nummbers.indexOf(" ")),
+                +nummbers.substring(nummbers.indexOf(" "))
+            )
+        );
+</script>
+
+<script>
+    alert("Начнем тестирование");
+    var res = test();
+    alert( (name !== "null" ? name + ", " : "") + "\nВы набрали " + res + " баллов.");
+</script>
+
+</body>
+</html>

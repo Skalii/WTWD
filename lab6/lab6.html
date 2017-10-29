@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 6</title>
+    <style>
+        span {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<script src="lab6.js"></script>
+
+<form name="infoUser" method="post" onsubmit="return checkData()" action="../server/lab7/process.php">
+    <br><br>
+    <div title="Поле для ввода имени" id="divName">
+        Ваше Имя: <input type="text" size="15" name="textName" placeholder="Дмитрий" autofocus>
+    </div>
+    <br>
+    <hr width="25%" align="left">
+    <br>
+    <div title="Выберите один вариант" id="divOS">
+        Выберите ОС:<br><br>
+        <input type="radio" name="radioOS" value="Windows XP"> Windows XP
+        <br>
+        <input type="radio" name="radioOS" value="Windows 7"> Windows 7
+        <br>
+        <input type="radio" name="radioOS" value="Windows 10"> Windows 10
+        <br>
+        <input type="radio" name="radioOS" value="Linux"> Linux
+        <br>
+        <input type="radio" name="radioOS" value="Other"> Другая
+    </div>
+    <br>
+    <hr width="25%" align="left">
+    <br>
+    <div title="Выберите несколько вариантов" id="divClient">
+        Кто пользуется продуктом: <br><br>
+        <input type="checkbox" name="checkClient1" value="You"> Вы
+        <br>
+        <input type="checkbox" name="checkClient2" value="Family"> Семья
+        <br>
+        <input type="checkbox" name="checkClient3" value="Friends"> Друзья
+        <br>
+        <input type="checkbox" name="checkClient4" value="Colleagues"> Коллеги
+    </div>
+    <br>
+    <hr width="25%" align="left">
+    <br>
+    Какой версией продукта вы пользуетесь:
+    <br><br>
+    <div title="Раскройте выпадающий список" id="divRelease">
+        <select name="selectRelease">
+            <option></option>
+            <option value="1.x.x">1.x.x</option>
+            <option value="2.x.x">2.x.x</option>
+            <option value="3.x.x">3.x.x</option>
+            <option value="4.x.x">4.x.x</option>
+            <option value="5.x.x">5.x.x</option>
+        </select>
+    </div>
+    <br>
+    <hr width="25%" align="left">
+    <br>
+    <input type="submit" name="submit" value="Отправить">
+</form>
+</body>
+</html>

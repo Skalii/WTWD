@@ -1,0 +1,20 @@
+span.error, span.errorPass {
+    color: red;
+}
+
+input {
+    border-color: blue;
+}
+
+textarea {
+    border-color: blue;
+}
+
+p {
+    font-size: 16px;
+}
+
+#span2 {
+    color: red;
+    display: none;
+}
