@@ -36,9 +36,9 @@ if (!$mysqli->connect_error) {
     $query = $mysqli->query($sql);
 
     if (!$mysqli->errno) {
-        echo "<h1>Содана таблица " . $_SESSION["nameTable"] . "</h1>";
-        header("Location: ../lab8/lab8.php");
-        exit;
+        echo "<h1>Содана таблица " . $_SESSION["nameTable"] . "</h1>
+              <script> var url = '../lab8/lab8.php'</script>
+              <input type='button' onclick='(function(){document.location.replace(url);})()' value='Посмотреть таблицы'>";
     } else echo "Ошибка (" . $mysqli->errno . ")" . $mysqli->error;
 } else die("Не удалось подлючиться. (" . $mysqli->connect_errno . ")" . $mysqli->connect_error);
 ?>

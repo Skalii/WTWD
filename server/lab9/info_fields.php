@@ -5,7 +5,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Lab 9</title>
-    <script src="../lab7/checkForm.js"></script>
 </head>
 <body>
 <hr width=345px align='left'>
@@ -18,7 +17,7 @@
 </div>
 <hr width=345px align='left'>
 <h1>Создание полей таблицы</h1>
-<form id="formFields" action="queryexecution.php" method="post">
+<form id="formFields" action="create_table.php" method="post">
     <?php
     $quantityFields = $_SESSION["quantityFields"];
 
