@@ -1,13 +1,10 @@
 function checkForm(form) {
-    var name = checkElem(form.name),
-        email = checkElem(form.email),
-        password1 = checkElem(form.password1),
-        password2 = checkElem(form.password2),
-        pass = checkPassword(form.password1, form.password2),
-        message = checkElem(form.message);
+    var bool = 0;
 
-    return name && email && password1 && password2 && pass && message;
+    for (var i = 1; i < arguments.length; i++)
+        bool += +checkElem(form[arguments[i]]);
 
+    return (bool === arguments.length - 1);
 }
 
 function checkElem(elem) {
@@ -20,6 +17,7 @@ function checkElem(elem) {
         var elemError = document.createElement("span");
         elemError.className = "error";
         elemError.innerHTML = "Поле пустое";
+        elemError.style.color = 'red';
         elem.parentNode.appendChild(elemError);
         return false;
     }
@@ -39,6 +37,7 @@ function checkPassword(elem1, elem2) {
             var elemError = document.createElement("span");
             elemError.className = "errorPass";
             elemError.innerHTML = "Пароли не совпадают";
+            elemError.style.color = 'red';
             elem1.parentNode.appendChild(elemError);
             return false;
         }
