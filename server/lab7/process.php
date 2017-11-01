@@ -5,6 +5,7 @@
     <title>Lab 7</title>
     <link rel="stylesheet" href="style.css">
     <script src="checkForm.js"></script>
+    <script src="display.js"></script>
 </head>
 <body>
 <hr width=345px align='left'>
@@ -21,7 +22,7 @@ echo "<p>Добро пожаловать, " . $_POST["name"] . "!</p>" .
     "<p>Ваш Email: " . $_POST["email"] . ".</p>";
 ?>
 <p>
-    <span id="span1" onclick="display('span2')" title="Нажмите для отображения пароля">Пароль: </span>
+    <span id="span1" onclick="hiding('span2')" title="Нажмите для отображения пароля">Пароль: </span>
     <span id="span2">
     <?php
     echo $_POST["password1"];

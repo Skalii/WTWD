@@ -45,9 +45,3 @@ function checkPassword(elem1, elem2) {
     }
     return false;
 }
-
-function display(elem) {
-    if (document.getElementById(elem).style.display === 'none')
-        document.getElementById(elem).style.display = 'block';
-    else document.getElementById(elem).style.display = 'none';
-}
