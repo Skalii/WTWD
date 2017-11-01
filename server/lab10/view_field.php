@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,47 +17,51 @@
 </div>
 <hr width=345px align='left'>
 <h1>Добавлено поле в таблицу my_music</h1>
-<form action="add_field.php">
+<form>
     <p>
-        <label>Номер записи: <?php echo $_REQUEST['id'] ?></label>
+        <label>Номер записи: <?php echo $_SESSION['id']; ?></label>
     </p>
     <hr width="345px" align="left">
     <p>
-        <label>Формат записи: <?php echo $_REQUEST['format'] ?></label>
+        <label>Формат записи: <?php echo $_SESSION['format']; ?></label>
     </p>
     <hr width="345px" align="left">
     <p>
-        <label>Название записи: <?php echo $_REQUEST['title'] ?></label>
+        <label>Название записи: <?php echo $_SESSION['title']; ?></label>
     </p>
     <hr width="345px" align="left">
     <p>
-        <label>Имя артиста: <?php echo $_REQUEST['artist_fn'] ?></label>
+        <label>Имя артиста: <?php echo $_SESSION['artist_fname']; ?></label>
     </p>
     <hr width="345px" align="left">
     <?php
-    if ($_REQUEST['artist_ln']) {
+
+    if ($_SESSION['artist_lname']) {
         echo "<p>
-                  <label>Фамилия артиста: " . $_REQUEST['artist_ln'] . "</label>
+                  <label>Фамилия артиста: " . $_SESSION['artist_lname'] . "</label>
+              </p>
+              <hr width='345px' align='left'>";
+    }
+    if ($_SESSION['rec_label']) {
+        echo "<p>
+                  <label>Студия звукозаписи: " . $_SESSION['rec_label'] . "</label>
+              </p>
+              <hr width='345px' align='left'>";
+    }
+    if ($_SESSION['my_notes']) {
+        echo "<p>
+                  <label>Моя заметка: " . $_SESSION['my_notes'] . "</label>
+              </p>
+              <hr width='345px' align='left'>";
+    }
+    if ($_SESSION['date_asq']) {
+        echo "<p>
+                  <label>Дата: " . $_SESSION['date_asq'] . "</label>
               </p>
               <hr width='345px' align='left'>";
     }
     ?>
-    <p>
-        <label>Студия звукозаписи: </label>
-        <input type="text" name="rec_label" size="15" placeholder="Введите студию">
-    </p>
-    <hr width="345px" align="left">
-    <p>
-        <label>Моя заметка: </label>
-        <textarea name="rec_label" cols="23" rows="3" placeholder="Введите заметку"></textarea>
-    </p>
-    <hr width="345px" align="left">
-    <p>
-        <label>Дата (гггг-мм-дд): </label>
-        <input type="date" name="date">
-    </p>
-    <hr width="345px" align="left">
-    <input type="submit" name="submit" value="Добавить еще">
+    <input type="button" value="Добавить еще" onclick="(function () {document.location.replace('lab10.html');})()">
 </form>
 </body>
 </html>
