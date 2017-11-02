@@ -13,7 +13,7 @@
     | <a href="../lab8/lab8.php">Л.р. №8</a>
     | <a href="lab9.html">Л.р. №9</a>
     | <a href="../lab10/lab10.html">Л.р. №10</a>
-    | <a href="../lab11/lab11.html">Л.р. №11</a> |
+    | <a href="../lab11/lab11.php">Л.р. №11</a> |
 </div>
 <hr width=345px align='left'>
 <h1>Создание полей таблицы</h1>

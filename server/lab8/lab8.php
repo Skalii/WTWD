@@ -11,7 +11,7 @@
     | <a href="lab8.php">Л.р. №8</a>
     | <a href="../lab9/lab9.html">Л.р. №9</a>
     | <a href="../lab10/lab10.html">Л.р. №10</a>
-    | <a href="../lab11/lab11.html">Л.р. №11</a> |
+    | <a href="../lab11/lab11.php">Л.р. №11</a> |
 </div>
 <hr width=345px align='left'>
 <div style="font-size: 20px;">
@@ -38,7 +38,7 @@
 
                     while ($table = $tables->fetch_assoc()) {
                         echo "<br>Таблица: <br><ul>";
-                        echo "<br><li style='color: orangered;'>" . $table["Tables_in_" . $row[0]] . "</li>";
+                        echo "<br><li style='color: blue;'>" . $table["Tables_in_" . $row[0]] . "</li>";
 
                         $columns = $mysqli->query("SHOW COLUMNS FROM " . $table["Tables_in_" . $row[0]]);
                         if (!$mysqli->errno) {

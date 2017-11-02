@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Lab 10</title>
-    <script src="../lab7/checkForm.js"></script>
+    <script src="../functions/checkForm.js"></script>
 </head>
 <body>
 <hr width=345px align='left'>
@@ -12,11 +12,11 @@
     | <a href="../lab8/lab8.php">Л.р. №8</a>
     | <a href="../lab9/lab9.html">Л.р. №9</a>
     | <a href="lab10.html">Л.р. №10</a>
-    | <a href="../lab11/lab11.html">Л.р. №11</a> |
+    | <a href="../lab11/lab11.php">Л.р. №11</a> |
 </div>
 <hr width=345px align='left'>
 <h1>Добавление записей в таблицу my_music</h1>
-<form action="add_field.php" onsubmit="return checkForm(this, 'id', 'title', 'artist_fname')" method="post">
+<form action="add_field.php" onsubmit="return checkForm(this, 'id', 'title', 'artist_fn')" method="post">
     <p>
         <label title="Поле обязательно">* Номер записи: </label>
         <input type="number" name="id" min="0" placeholder="0" autofocus>
@@ -36,12 +36,12 @@
     <hr width="345px" align="left">
     <p>
         <label title="Поле обязательно">* Имя артиста: </label>
-        <input type="text" name="artist_fname" placeholder="Введите имя">
+        <input type="text" name="artist_fn" placeholder="Введите имя">
     </p>
     <hr width="345px" align="left">
     <p>
         <label>Фамилия артиста: </label>
-        <input type="text" name="artist_lname" size="17" placeholder="Введите фамилию">
+        <input type="text" name="artist_ln" size="17" placeholder="Введите фамилию">
     </p>
     <hr width="345px" align="left">
     <p>

@@ -5,6 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Lab 10</title>
+    <script src="../functions/display.js"></script>
 </head>
 <body>
 <hr width=345px align='left'>
@@ -13,7 +14,7 @@
     | <a href="../lab8/lab8.php">Л.р. №8</a>
     | <a href="../lab9/lab9.html">Л.р. №9</a>
     | <a href="lab10.html">Л.р. №10</a>
-    | <a href="../lab11/lab11.html">Л.р. №11</a> |
+    | <a href="../lab11/lab11.php">Л.р. №11</a> |
 </div>
 <hr width=345px align='left'>
 <h1>Добавлено поле в таблицу my_music</h1>
@@ -31,14 +32,14 @@
     </p>
     <hr width="345px" align="left">
     <p>
-        <label>Имя артиста: <?php echo $_SESSION['artist_fname']; ?></label>
+        <label>Имя артиста: <?php echo $_SESSION['artist_fn']; ?></label>
     </p>
     <hr width="345px" align="left">
     <?php
 
     if ($_SESSION['artist_lname']) {
         echo "<p>
-                  <label>Фамилия артиста: " . $_SESSION['artist_lname'] . "</label>
+                  <label>Фамилия артиста: " . $_SESSION['artist_ln'] . "</label>
               </p>
               <hr width='345px' align='left'>";
     }
@@ -61,7 +62,7 @@
               <hr width='345px' align='left'>";
     }
     ?>
-    <input type="button" value="Добавить еще" onclick="(function () {document.location.replace('lab10.html');})()">
+    <input type="button" value="Добавить еще" onclick="redirection('lab10.html')">
 </form>
 </body>
 </html>
